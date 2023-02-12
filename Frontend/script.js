@@ -31,3 +31,8 @@ let autoSlide = setInterval(function() {
     }
     showcaseImgs[current].classList.add("active");
     }, 5000);
+
+
+    
+    
+    

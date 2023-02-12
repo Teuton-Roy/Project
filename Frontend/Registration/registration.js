@@ -24,3 +24,20 @@ links.forEach(link => {
        forms.classList.toggle("show-signup");
     })
 })
+
+const googleLogins = document.querySelectorAll('.field.Google');
+const githubLogins = document.querySelectorAll('.field.github');
+
+googleLogins.forEach(function(googleLogin) {
+  googleLogin.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'https://www.google.com/accounts/';
+  });
+});
+
+githubLogins.forEach(function(githubLogin) {
+  githubLogin.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'https://github.com/login';
+  });
+});
