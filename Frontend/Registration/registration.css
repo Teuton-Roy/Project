@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4070f4;
+    background-color: #edf8f8;
     column-gap: 30px;
 }
 .form{
@@ -21,7 +21,7 @@
     max-width: 430px;
     width: 100%;
     padding: 30px;
-    border-radius: 6px;
+    border-radius: 80px;
     background: #FFF;
 }
 .form.signup{
@@ -127,15 +127,15 @@ form{
     align-items: center;
     justify-content: center;
 }
-a.facebook{
+a.Google{
     color: #fff;
     background-color: #4267b2;
 }
-a.facebook .facebook-icon{
+a.Google .google-icon{
     height: 28px;
     width: 28px;
     color: #0171d3;
-    font-size: 20px;
+    font-size: 1.5em;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -167,7 +167,7 @@ a.github .github-icon{
     height: 30px;
     width: 30px;
     color:white;
-    font-size: 20px;
+    font-size: 1.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
