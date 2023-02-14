@@ -13,7 +13,7 @@ body {
 }
 
 header nav {
-  background-color: #333;
+  background-color: #737373;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -40,6 +40,51 @@ header nav ul li a:hover {
   border-radius: 40px;
   background-color: #555;
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#D6EAF8;
+  padding: 20px;
+  border: 1px dotted black;
+  border-radius: 25px;
+  z-index: 1000;
+  width: 400px;
+  height: 200px;
+  animation: fadeIn 1s;
+}
+
+.popup-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close:hover{
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
 
 #showcase {
   width: 100%;
@@ -104,8 +149,8 @@ footer {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #333;
-  color: #fff;
+  background-color: #deebf5;
+  color: black;
   text-align: center;
 }
 
@@ -135,3 +180,19 @@ footer a {
   background: black;
   color: white;
 }
+
+.fa-university{
+  background: #f1c40f;
+  color: white;
+}
+
+.fa-youtube{
+  background: #bb0000;
+  color: white;
+}
+
+.fa-twitter{
+  background: #55acee;
+  color: white;
+}
+

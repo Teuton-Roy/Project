@@ -32,7 +32,20 @@ let autoSlide = setInterval(function() {
     showcaseImgs[current].classList.add("active");
     }, 5000);
 
-
+    const popup = document.getElementById("popup");
+    const close = document.getElementById("close");
+    const dateTime = document.getElementById("date-time");
+    
+    const currentDateTime = new Date();
+    dateTime.innerHTML = `${currentDateTime.toDateString()} ,${currentDateTime.toLocaleTimeString()}`;
+    
+    popup.style.display = "block";
+    
+    close.onclick = function() {
+      popup.style.display = "none";
+    };
+    
+    
     
     
     
