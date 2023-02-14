@@ -70,9 +70,8 @@ header nav ul li a:hover {
     line-height: 10px;
     text-align: center;
     border-radius: 50px;
-    color: white;
+    color: rgb(181, 179, 179);
     background-color:rgb(44, 44, 44);
-    border: 1px solid white;
   }
   
   .fa-user:hover {
