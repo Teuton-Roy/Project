@@ -1,0 +1,73 @@
+form {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px #b3b3b3;
+    height: 100%;
+    width: 1000px;
+    /* max-width: 400px; */
+    margin: 0 auto;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+  }
+  
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #b3b3b3;
+    box-shadow: none;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-top: 20px;
+  }
+
+  label.gender {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+  }
+  
+  input[type="radio"] {
+    margin: 0 10px 0 0;
+  }
+  
+  .gender-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+  
