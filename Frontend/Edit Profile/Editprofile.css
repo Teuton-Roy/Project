@@ -35,25 +35,11 @@ form {
     margin-top: 30px;
 
   }
-/* 
-  label.gender {
-    font-size: 180px;
-    font-weight: bold;
-    margin-top: 20px;
-    display: block;
-  }
-   */
+
   input[type="radio"] {
     margin: 0 5px 0 70px;
     margin-top: 5px;
   }
-  
-  /* .gender-options {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-   */
   
   input[type="submit"] {
     width: 100%;
@@ -71,4 +57,19 @@ form {
     background-color: #3e8e41;
   }
 
+  div label, div input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  div label {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  
+  div input[type="radio"] {
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+  
   

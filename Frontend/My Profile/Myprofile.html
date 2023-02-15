@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="Myprofile.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    // Get the canvas element and create a new Chart object
+var canvas = document.getElementById('improvement-chart');
+var chart = new Chart(canvas, {
+  type: 'line',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [{
+      label: 'Improvement',
+      data: [5, 10, 15, 20, 25, 30],
+      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+  </script>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Student Dashboard</h1>
+    <div class="chart">
+      <h2>Improvement Chart</h2>
+      <canvas id="improvement-chart"></canvas>
+    </div>
+    <div class="info">
+      <div class="coding-rounds">
+        <h2>Coding Rounds</h2>
+        <p>Number of coding rounds taken: <span id="coding-rounds-count">10</span></p>
+      </div>
+      <div class="mock-tests">
+        <h2>Mock Tests</h2>
+        <p>Number of mock tests taken: <span id="mock-tests-count">5</span></p>
+      </div>
+      <div class="project-verification">
+        <h2>Project Verification</h2>
+        <form>
+          <label for="project-name">Project Name:</label>
+          <input type="text" id="project-name" name="project-name">
+          <label for="project-file">Project File:</label>
+          <input type="file" id="project-file" name="project-file">
+          <input type="submit" value="Submit Project" class="submit-project">
+        </form>
+      </div>
+      <div class="placement-stats">
+        <h2>Placement Stats</h2>
+        <div class="pie-chart">
+          <h3>Applications</h3>
+          <canvas id="applications-chart"></canvas>
+        </div>
+        <div class="pie-chart">
+          <h3>Interviews</h3>
+          <canvas id="interviews-chart"></canvas>
+        </div>
+      </div>
+      <div class="skill">
+        <h2>Skill</h2>
+        <ul>
+          <li>Coding: <span id="coding-skill">5</span>/10</li>
+          <li>Development: <span id="development-skill">7</span>/10</li>
+        </ul>
+      </div>
+      <div class="seminar">
+        <h2>Seminars</h2>
+        <p>Number of seminars attended: <span id="seminar-count">3</span></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
