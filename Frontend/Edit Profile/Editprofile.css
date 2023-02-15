@@ -15,8 +15,7 @@ form {
     margin-top: 20px;
     display: block;
   }
-  
-  
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -33,26 +32,28 @@ form {
   
   input[type="radio"],
   input[type="checkbox"] {
-    margin-top: 20px;
-  }
+    margin-top: 30px;
 
+  }
+/* 
   label.gender {
-    font-size: 18px;
+    font-size: 180px;
     font-weight: bold;
     margin-top: 20px;
     display: block;
   }
-  
+   */
   input[type="radio"] {
-    margin: 0 10px 0 0;
+    margin: 0 5px 0 70px;
+    margin-top: 5px;
   }
   
-  .gender-options {
+  /* .gender-options {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
   }
-  
+   */
   
   input[type="submit"] {
     width: 100%;
