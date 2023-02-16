@@ -15,19 +15,19 @@
   }
   
   /* Improvement chart styles */
+  canvas#myChart {
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+
   .chart {
-    width: 60%;
+    width: 40%;
   }
   
   .chart h2 {
-    margin-bottom: 10px;
-    color: #2C3E50;
     font-size: 1.5rem;
-  }
-  
-  .chart canvas {
-    width: 100%;
-    max-width: 600px;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   
   /* Info section styles */
