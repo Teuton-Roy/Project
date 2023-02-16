@@ -3,40 +3,18 @@
 <head>
   <title>Student Dashboard</title>
   <link rel="stylesheet" href="Myprofile.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js">
-    // Get the canvas element and create a new Chart object
-var canvas = document.getElementById('improvement-chart');
-var chart = new Chart(canvas, {
-  type: 'line',
-  data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-    datasets: [{
-      label: 'Improvement',
-      data: [5, 10, 15, 20, 25, 30],
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
-      borderColor: 'rgba(54, 162, 235, 1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-});
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="dashboard">
     <h1>Student Dashboard</h1>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js" integrity="sha512-v3ygConQmvH0QehvQa6gSvTE2VdBZ6wkLOlmK7Mcy2mZ0ZF9saNbbk19QeaoTHdWIEiTlWmrwAL4hS8ElnGFbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <div class="chart">
       <h2>Improvement Chart</h2>
-      <canvas id="improvement-chart"></canvas>
+      <canvas id="myChart"></canvas>
     </div>
+
     <div class="info">
       <div class="coding-rounds">
         <h2>Coding Rounds</h2>
