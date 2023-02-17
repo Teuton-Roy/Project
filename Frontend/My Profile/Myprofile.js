@@ -14,25 +14,25 @@ var myChart = new Chart(ctx, {
         borderWidth: 1
       }, {
         label: 'Development',
-        data: [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26],
+        data: [4, 6, 8, 9.5, 12, 4, 10, 18, 20, 7, 3, 26],
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1
       }, {
         label: 'Design',
-        data: [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32],
+        data: [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 13],
         backgroundColor: 'rgba(255, 206, 86, 0.2)',
         borderColor: 'rgba(255, 206, 86, 1)',
         borderWidth: 1
       }, {
         label: 'Project-Verification',
-        data: [5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28],
+        data: [5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 20],
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
       }, {
         label: 'Spoken English',
-        data: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+        data: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 9.5],
         backgroundColor: 'rgba(153, 102, 255, 0.2)',
         borderColor: 'rgba(153, 102, 255, 1)',
         borderWidth: 1
