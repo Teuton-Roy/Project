@@ -7,12 +7,13 @@ body {
 
 /* Set dashboard styles */
 .dashboard {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 20px;
   background-color: #E0E0E0;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Set heading styles */
@@ -42,7 +43,7 @@ h1 {
 }
 
 /* Set coding rounds styles */
-.coding-rounds,
+/* .coding-rounds,
 .mock-tests,
 .project-verification,
 .placement-stats,
@@ -53,7 +54,87 @@ h1 {
   padding: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.coding-rounds{
+  flex-basis: calc(50% - 10px);
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  float: left;
 }
+.mock-tests {
+  flex-basis: calc(50% - 10px);
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-verification,
+.placement-stats {
+  flex-basis: calc(50% - 10px);
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.skill,
+.seminar {
+  flex-basis: calc(50% - 10px);
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Set coding rounds and mock tests to display side by side */
+@media (min-width: 768px) {
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .coding-rounds,
+  .mock-tests {
+    flex-basis: calc(50% - 10px);
+    margin-right: 20px;
+  }
+}
+
+/* Set project verification and placement stats to display side by side */
+@media (min-width: 992px) {
+  .project-verification,
+  .placement-stats {
+    flex-basis: calc(50% - 10px);
+    margin-right: 20px;
+  }
+}
+
+/* Set skill and seminar to display side by side */
+@media (min-width: 1200px) {
+  .skill,
+  .seminar {
+    flex-basis: calc(50% - 10px);
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .coding-rounds,
 .mock-tests,
