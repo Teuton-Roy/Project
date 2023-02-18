@@ -258,7 +258,7 @@ const interviewsOptions = {
 
 // Create the chart
 const myInterviewsChart = new Chart(interviewsChart, {
-    type: "bar",
+    type: "line",
     data: interviewsData,
     options: interviewsOptions
 });
