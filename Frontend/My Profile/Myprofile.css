@@ -230,3 +230,61 @@ canvas {
   max-width: 100%;
   height: auto;
 }
+
+
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #deebf5;
+  color: black;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5 rem;
+  text-decoration: none;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+}
+
+.fa-university{
+  background: #f1c40f;
+  color: white;
+}
+
+.fa-youtube{
+  background: #bb0000;
+  color: white;
+}
+
+.fa-twitter{
+  background: #55acee;
+  color: white;
+}
