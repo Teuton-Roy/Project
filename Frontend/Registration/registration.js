@@ -41,3 +41,16 @@ githubLogins.forEach(function(githubLogin) {
     window.location.href = 'https://github.com/login';
   });
 });
+
+// make password which is contain 8 character and 1 number and 1 special character//
+const passwordInput = document.getElementById("password-input");
+
+passwordInput.addEventListener("focus", () => {
+  const password = passwordInput.value;
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  if(!regex.test(password)){
+    alert("Password must contain 8 characters, 1 number and 1 special character");
+    passwordInput.focus();
+  }
+});
