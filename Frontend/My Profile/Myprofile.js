@@ -262,3 +262,4 @@ const myInterviewsChart = new Chart(interviewsChart, {
     data: interviewsData,
     options: interviewsOptions
 });
+

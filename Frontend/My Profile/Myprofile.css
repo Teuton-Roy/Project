@@ -7,10 +7,86 @@ body {
   margin: 0;
 }
 
+nav {
+  background-color: #737373;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  /* justify-content: flex-end; */
+  /* list-style: none; */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  border-radius: 40px;
+  background-color: #555;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+  }
+  
+  .profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 150px;
+  padding: 10px;
+  background-color: black;
+  border: 1px solid gray;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+  
+  .profile-dropdown:hover .dropdown-content {
+  display: block;
+  }
+  
+  .fa-user {
+    font-size: 20px;
+    width: 2px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    background-color:rgb(44, 44, 44);
+  }
+  
+  .fa-user:hover {
+    color: #161515;
+    background-color: white;
+  }
+
+
+
+
+
+
+
+
+
+
 /* Set dashboard styles */
 .dashboard {
   width: 85%;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 20px;
   background-color: #E0E0E0;
   border-radius: 10px;
