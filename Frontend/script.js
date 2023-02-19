@@ -46,6 +46,6 @@ let autoSlide = setInterval(function() {
     };
     
     
-    
-    
-    
+function Logout(){
+  alert("Are you sure you want to logout?");
+}

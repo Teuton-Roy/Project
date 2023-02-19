@@ -263,3 +263,10 @@ const myInterviewsChart = new Chart(interviewsChart, {
     options: interviewsOptions
 });
 
+function Logout(){
+  //show Alert//
+  alert("You have been logged out");
+  //redirect to login page//
+  window.location.href = "/Frontend/Home.html";
+}
+
