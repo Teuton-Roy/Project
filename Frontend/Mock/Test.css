@@ -1,0 +1,30 @@
+#question-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+  }
+  
+  #question {
+    margin-bottom: 10px;
+  }
+  
+  #answers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #answers li {
+    margin-bottom: 10px;
+  }
+  
+  #submit-btn {
+    margin: 20px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
