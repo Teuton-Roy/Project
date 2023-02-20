@@ -18,71 +18,132 @@ const mcqQuestions = [
     // Add 48 more questions
   ];
   
-  const questionElement = document.getElementById("question");
-  const answerElements = document.getElementById("answers");
+  const mcqContainer = document.getElementById("mcq-container");
+  const saqContainer = document.getElementById("saq-container");
+  const mcqList = document.getElementById("mcq-list");
+  const saqList = document.getElementById("saq-list");
+  const saqAnswer = document.getElementById("saq-answer");
   const submitButton = document.getElementById("submit-btn");
   
   let currentQuestionIndex = 0;
+  let numCorrect = 0;
   
-  function displayQuestion() {
-    // Get the current question object from the MCQ or SAQ question array
-    let currentQuestion;
-    if (currentQuestionIndex < mcqQuestions.length) {
-      currentQuestion = mcqQuestions[currentQuestionIndex];
-    } else if (currentQuestionIndex < mcqQuestions.length + saqQuestions.length) {
-      currentQuestion = saqQuestions[currentQuestionIndex - mcqQuestions.length];
-    } else {
-      // No more questions
-      questionElement.innerText = "All questions completed!";
-      answerElements.innerHTML = "";
-      submitButton.style.display = "none";
-      return;
-    }
+  function displayMcqQuestion() {
+    const question = mcqQuestions[currentQuestionIndex];
+    const choices = question.answers.map((answer, index) => {
+      return `<li><label><input type="radio" name="mcq-answer" value="${index}" required> ${answer}</label></li>`;
+    }).join("");
   
-    // Display the question
-    questionElement.innerText = currentQuestion.question;
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+      <h3>${question.question}</h3>
+      <ul>${choices}</ul>
+    `;
+    mcqList.appendChild(listItem);
+  }
+
+//   const radioButtons = listItem.querySelectorAll('input[type="radio"]');
+//   radioButtons.forEach(radioButton => {
+//     radioButton.addEventListener("change", () => {
+//       // Remove selected class from all labels
+//       listItem.querySelectorAll('label').forEach(label => {
+//         label.classList.remove('selected');
+//       });
+
+//       // Add selected class to the label of the selected answer
+//       const selectedLabel = radioButton.parentNode;
+//       selectedLabel.classList.add('selected');
+//     });
+//   });
   
-    // Display the answer options for MCQ questions, or remove the answer options for SAQ questions
-    answerElements.innerHTML = "";
-    if (currentQuestion.answers) {
-      currentQuestion.answers.forEach((answer, index) => {
-        const li = document.createElement("li");
-        const input = document.createElement("input");
-        input.type = "radio";
-        input.name = "answer";
-        input.value = index;
-        li.appendChild(input);
-        li.appendChild(document.createTextNode(answer));
-        answerElements.appendChild(li);
-      });
-    }
-  
-    // Increment the current question index
-    currentQuestionIndex++;
+  function displaySaqQuestion() {
+    const questions = saqQuestions[currentQuestionIndex];
+    // const choices = question.answers.map((answer, index) => {
+    //     return `<li><label><input type="radio" name="mcq-answer" value="${index}" required> ${answer}</label></li>`;
+    //   }).join("");
+
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+      <h3>${questions}</h3>
+      <textarea name="saq-answer" rows="4" cols="50" required></textarea>
+    `;
+    saqList.appendChild(listItem);
   }
   
-  function checkAnswer() {
-    // Get the selected answer
-    const selectedAnswer = document.querySelector("input[name='answer']:checked");
+  function displayNextQuestion() {
+    if (currentQuestionIndex < mcqQuestions.length) {
+      // Display the next MCQ question
+      displayMcqQuestion();
+      mcqContainer.style.display = "block";
+      saqContainer.style.display = "none";
+    } else if (currentQuestionIndex < mcqQuestions.length + saqQuestions.length) {
+      // Display the next SAQ question
+      displaySaqQuestion();
+      mcqContainer.style.display = "none";
+      saqContainer.style.display = "block";
+    } else {
+      // All questions have been answered, show the results
+      showResults();
+    }
+  }
+  
+  function showResults() {
+    mcqContainer.style.display = "none";
+    saqContainer.style.display = "none";
+  
+    const score = numCorrect / mcqQuestions.length;
+    const message = `You scored ${numCorrect} out of ${mcqQuestions.length}.`;
+    if (score >= 0.8) {
+      alert(`Congratulations! ${message}`);
+    } else if (score >= 0.6) {
+      alert(`Good job. ${message}`);
+    } else {
+      alert(`You need to study more. ${message}`);
+    }
+  }
+  
+  function checkMcqAnswer() {
+    const selectedAnswer = document.querySelector("input[name='mcq-answer']:checked");
     if (!selectedAnswer) {
       alert("Please select an answer.");
       return;
     }
   
-    // Check if the selected answer is correct
-    const currentQuestion = currentQuestionIndex <= mcqQuestions.length ?
-      mcqQuestions[currentQuestionIndex - 1] : saqQuestions[currentQuestionIndex - mcqQuestions.length - 1];
     const selectedAnswerIndex = parseInt(selectedAnswer.value);
-    if (selectedAnswerIndex === currentQuestion.correctAnswer) {
-      alert("Correct answer!");
-    } else {
-      alert("Incorrect answer.");
-    }
-  
-    // Display the next question
-    displayQuestion();
-  }
-  
-  // Display the first question
-  displayQuestion();
-  
+    const question = mcqQuestions[currentQuestionIndex];
+    
+    if (selectedAnswerIndex === question.correctAnswer) {
+        numCorrect++;
+        }
+        
+        currentQuestionIndex++;
+        mcqList.innerHTML = "";
+        displayNextQuestion();
+        }
+        
+        function checkSaqAnswer() {
+        if (!saqAnswer.value) {
+        alert("Please provide an answer.");
+        return;
+        }
+        
+        currentQuestionIndex++;
+        saqList.innerHTML = "";
+        displayNextQuestion();
+        }
+        
+        function onSubmitButtonClick() {
+        if (currentQuestionIndex < mcqQuestions.length + saqQuestions.length) {
+        // Not all questions have been answered yet
+        alert("Please answer all questions.");
+        return;
+        }
+        
+        showResults();
+        }
+        
+        displayNextQuestion();
+        
+        mcqList.addEventListener("change", checkMcqAnswer);
+        saqAnswer.addEventListener("input", checkSaqAnswer);
+        submitButton.addEventListener("click", onSubmitButtonClick);

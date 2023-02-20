@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mock Test Platform</title>
-  <link rel="stylesheet" href="Test.css">
-  <script src="Test.js" defer></script>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="Test.css">
+    <script src="Test.js" defer></script>
+  <title>Mock Test </title>
 </head>
 <body>
-  <div id="question-container">
-    <h2 id="question"></h2>
-    <ul id="answers"></ul>
+  <h1>Mock Test Platform</h1>
+
+  <div id="mcq-container">
+    <h2>Multiple Choice Questions (MCQ)</h2>
+    <ol id="mcq-list"></ol>
   </div>
 
-  <button id="submit-btn">Submit Answer</button>
+  <div id="saq-container">
+    <h2>Short Answer Questions (SAQ)</h2>
+    <ol id="saq-list"></ol>
+    <textarea id="saq-answer" rows="4" cols="50"></textarea>
+  </div>
 
+  <button id="submit-btn">Submit</button>
 </body>
 </html>
