@@ -45,6 +45,9 @@ fetch("https://opentdb.com/api.php?amount=50&category=18&difficulty=medium&type=
       const saqItem = document.createElement("li");
       saqItem.innerHTML = `
         <div class="question">${index + 1}. ${question.question}</div>
+        <div class="answer">
+          <input type="text" id="saq-${index}" placeholder="Enter your answer...">
+        </div>
       `;
       saqList.appendChild(saqItem);
       saqAnswers.push(null);
@@ -78,12 +81,6 @@ submitBtn.addEventListener("click", () => {
 
   // Displaying the results
   const totalScore = mcqScore + saqScore;
-  alert(`Your total score is ${totalScore} out of 100.\n\nMCQ score: ${mcqScore}\nSAQ score: ${saqScore}`);
+  alert(`Your total score is ${totalScore} out of 100.\n\nMCQ score: ${mcqScore * 2}\nSAQ score: ${saqScore}`);
 });
 
-// Handling the student's answers to MC 
-
-// Handling the student's answers to SAQ questions
-saqList.addEventListener("change", event => {
-    saqAnswers[parseInt(event.target.id.split("-")[1])] = event.target.value;
-});
