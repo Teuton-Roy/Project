@@ -93,14 +93,19 @@ nav {
       background-color:rgb(44, 44, 44);
     } */
     
-    .fa-user {
+    .profile-dropdown .fa-user {
         background-color: black;
         color: white;
-        width: 2rem;
         padding: 10px;
-        border-radius: 50px;
-
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
+      
+      
       
 
     .fa-user:hover {
