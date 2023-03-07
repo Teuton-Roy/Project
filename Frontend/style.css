@@ -95,11 +95,11 @@ header nav ul li a:hover {
   transform: translate(-50%, -50%);
   background-color:#D6EAF8;
   padding: 20px;
-  border: 1px dotted black;
+  border: 1px ridge black;
   border-radius: 25px;
   z-index: 1000;
   width: 400px;
-  height: 200px;
+  height: 300px;
   animation: fadeIn 1s;
 }
 
