@@ -241,3 +241,63 @@ footer a {
   background: #55acee;
   color: white;
 }
+
+
+
+
+/* Toggle switch styles */
+.toggle-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.toggle-slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: "";
+  height: 16px;
+  left: 2px;
+  position: absolute;
+  transition: .4s;
+  width: 16px;
+}
+
+.toggle-checkbox:checked + .toggle-slider {
+  background-color: #222;
+}
+
+.toggle-checkbox:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .toggle-slider {
+  background-color: #fff;
+}
+
+.dark-mode .toggle-slider:before {
+  background-color: #222;
+  transform: translateX(20px);
+}

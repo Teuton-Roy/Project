@@ -49,3 +49,16 @@ let autoSlide = setInterval(function() {
 function Logout(){
   alert("Are you sure you want to logout?");
 }
+
+
+// Get the toggle switch and body element
+const toggleSwitch = document.querySelector('.toggle-checkbox');
+const body = document.querySelector('body');
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  body.classList.toggle('dark-mode');
+}
+
+// Add event listener to the toggle switch
+toggleSwitch.addEventListener('change', toggleDarkMode);
