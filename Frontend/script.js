@@ -53,12 +53,15 @@ function Logout(){
 
 // Get the toggle switch and body element
 const toggleSwitch = document.querySelector('.toggle-checkbox');
-const body = document.querySelector('body');
 
-// Function to toggle dark mode
-function toggleDarkMode() {
-  body.classList.toggle('dark-mode');
+function switchTheme(event) {
+  if (event.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }    
 }
 
-// Add event listener to the toggle switch
-toggleSwitch.addEventListener('change', toggleDarkMode);
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+
