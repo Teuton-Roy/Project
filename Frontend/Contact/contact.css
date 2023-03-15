@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Poppins:wght@300&family=Roboto:wght@300&family=Shantell+Sans:wght@300&family=Ubuntu:wght@300&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,14 +8,14 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-html{
+html {
     height: 100%;
     box-sizing: border-box;
-  }
+}
 
-  body {
+body {
     position: relative;
-  }
+}
 
 nav {
     background-color: #737373;
@@ -23,33 +23,33 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #fff;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     border-radius: 40px;
     background-color: #555;
-  }
-  
-  .profile-dropdown {
+}
+
+.profile-dropdown {
     position: relative;
     display: inline-block;
-    }
-    
-    .profile-dropdown .dropdown-content {
+}
+
+.profile-dropdown .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
@@ -58,35 +58,32 @@ nav {
     padding: 10px;
     background-color: black;
     border: 1px solid gray;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    }
-    
-    .profile-dropdown:hover .dropdown-content {
+}
+
+.profile-dropdown:hover .dropdown-content {
     display: block;
-    }
+}
 
-    .profile-dropdown .fa-user {
-        background-color: black;
-        color: white;
-        padding: 10px;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      
-      
+.profile-dropdown .fa-user {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .fa-user:hover {
-      color: #161515;
-      background-color: white;
-    }
+.fa-user:hover {
+    color: #161515;
+    background-color: white;
+}
 
-.contact{
+.contact {
     position: relative;
     min-height: 100vh;
     padding: 50px 100px;
@@ -99,23 +96,23 @@ nav {
     background-size: cover;
 }
 
-.contact .content{
+.contact .content {
     max-width: 800px;
     text-align: center;
 }
 
-.contact .content h1{
+.contact .content h1 {
     font-size: 40px;
     font-weight: 800;
     color: #fff;
 }
 
-.contact .content p{
+.contact .content p {
     font-weight: 400;
     color: #fff;
 }
 
-.container{
+.container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -123,7 +120,7 @@ nav {
     margin-top: 30px;
 }
 
-.container .contactInfo{
+.container .contactInfo {
     width: 50%;
     display: flex;
     /* justify-content: center;
@@ -131,13 +128,13 @@ nav {
     flex-direction: column;
 }
 
-.container .contactInfo .box{
+.container .contactInfo .box {
     position: relative;
     padding: 20px 0;
     display: flex;
 }
 
-.container .contactInfo .box .icon{
+.container .contactInfo .box .icon {
     min-width: 60px;
     height: 60px;
     background: #fff;
@@ -149,7 +146,7 @@ nav {
     font-size: 20px;
 }
 
-.container .contactInfo .box .text{
+.container .contactInfo .box .text {
     display: flex;
     margin-left: 20px;
     font-size: 16px;
@@ -158,30 +155,30 @@ nav {
     font-weight: 300;
 }
 
-.container .contactInfo .box .text h3{
+.container .contactInfo .box .text h3 {
     font-weight: 600;
     color: #00bcd4;
 }
 
-.contactForm{
+.contactForm {
     width: 40%;
     padding: 40px;
     background: #fff;
 }
 
-.contactForm h2{
+.contactForm h2 {
     font-size: 30px;
     color: #333;
     font-weight: 600;
 }
 
-.contactForm .inputBox{
+.contactForm .inputBox {
     position: relative;
     margin-top: 25px;
 }
 
 .contactForm .inputBox input,
-.contactForm .inputBox textarea{
+.contactForm .inputBox textarea {
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
@@ -191,7 +188,7 @@ nav {
     resize: none;
 }
 
-.contactForm .inputBox span{
+.contactForm .inputBox span {
     position: absolute;
     left: 0;
     padding: 5px 10px;
@@ -202,21 +199,21 @@ nav {
     color: #666;
 }
 
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span,
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~ span{
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span,
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span {
     color: #e91e63;
     font-size: 12px;
     transform: translateY(-20px);
 }
 
-.contactForm .inputBox textarea{
+.contactForm .inputBox textarea {
     min-height: 150px;
     padding-top: 10px;
 }
 
-.contactForm .inputBox input[type="submit"]{
+.contactForm .inputBox input[type="submit"] {
     width: 100px;
     background: #00bcd4;
     border: none;
@@ -227,56 +224,66 @@ nav {
     font-size: 20px;
 }
 
-.contactForm .inputBox input[type="submit"]:hover{
+.contactForm .inputBox input[type="submit"]:hover {
     background: #115e68;
     border-radius: 25px;
 }
 
 @media (max-width: 991px) {
-    .contact{
+    .contact {
         padding: 50px 50px;
     }
-    .container{
+
+    .container {
         flex-direction: column;
     }
-    .container .contactInfo{
+
+    .container .contactInfo {
         width: 100%;
         margin-bottom: 30px;
     }
-    .contactForm{
+
+    .contactForm {
         width: 100%;
     }
 }
 
 @media (max-width: 767px) {
-    .contact{
+    .contact {
         padding: 50px 20px;
     }
-    .contact .content h1{
+
+    .contact .content h1 {
         font-size: 30px;
     }
-    .contact .content p{
+
+    .contact .content p {
         font-size: 14px;
     }
-    .contactForm h2{
+
+    .contactForm h2 {
         font-size: 20px;
     }
-    .contactForm .inputBox input[type="submit"]{
+
+    .contactForm .inputBox input[type="submit"] {
         font-size: 16px;
     }
 }
 
 @media (max-width: 575px) {
-    .contact .content h1{
+    .contact .content h1 {
         font-size: 25px;
     }
-    .contact .content p{
+
+    .contact .content p {
         font-size: 12px;
     }
-    .contactForm h2{
+
+    .contactForm h2 {
         font-size: 18px;
     }
-    .contactForm .inputBox input[type="submit"]{
+
+    .contactForm .inputBox input[type="submit"] {
         font-size: 14px;
     }
 }
@@ -289,16 +296,16 @@ footer {
     background-color: #deebf5;
     color: black;
     text-align: center;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: white;
     margin: 0 10px;
     font-size: 1.5em;
     text-decoration: none;
-  }
-  
-  .fa {
+}
+
+.fa {
     padding: 10px;
     font-size: 20px;
     width: 40px;
@@ -306,29 +313,29 @@ footer {
     text-decoration: none;
     margin: 5px 5px;
     border-radius: 50%;
-  }
-  
-  .fa-linkedin {
+}
+
+.fa-linkedin {
     background: #007bb5;
     color: white;
-  }
-  
-  .fa-github {
+}
+
+.fa-github {
     background: black;
     color: white;
-  }
-  
-  .fa-university{
+}
+
+.fa-university {
     background: #f1c40f;
     color: white;
-  }
-  
-  .fa-youtube{
+}
+
+.fa-youtube {
     background: #bb0000;
     color: white;
-  }
-  
-  .fa-twitter{
+}
+
+.fa-twitter {
     background: #55acee;
     color: white;
-  }
+}
