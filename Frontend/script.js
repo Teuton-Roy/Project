@@ -51,17 +51,6 @@ function Logout(){
 }
 
 
-// Get the toggle switch and body element
-const toggleSwitch = document.querySelector('.toggle-checkbox');
 
-function switchTheme(event) {
-  if (event.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
 
 
