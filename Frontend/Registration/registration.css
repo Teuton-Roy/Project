@@ -146,22 +146,6 @@ a.Google .google-icon{
     justify-content: center;
     background-color: #fff;
 }
-/* .facebook-icon,
-img.github-img{
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-} */
-
-/* img.google-img{
-    height: 20px;
-    width: 20px;
-    object-fit: cover;
-} */
-
-
-
 
 a.github{
     background-color: #03060b;
