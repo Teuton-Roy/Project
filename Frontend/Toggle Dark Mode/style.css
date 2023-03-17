@@ -14,9 +14,8 @@ body{
     transition: all 0.5s linear;
 }
 
-.dark-mode{
-    background-color:rgb(27, 23, 23);
-    /* color: white; */
+body.dark{
+    background-color: rgb(27, 23, 23);
 }
 
 .togglebtn{
