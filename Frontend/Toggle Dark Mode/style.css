@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    transition: all 0.5s linear;
+}
+
+.dark-mode{
+    background-color:rgb(27, 23, 23);
+    /* color: white; */
+}
+
+.togglebtn{
+    z-index: 2;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1.5px 1.5px 5px #373636;
+    background: linear-gradient(145deg, #e1e1e1, #fff);
+}
