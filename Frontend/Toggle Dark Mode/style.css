@@ -29,3 +29,20 @@ body{
     box-shadow: 1.5px 1.5px 5px #373636;
     background: linear-gradient(145deg, #e1e1e1, #fff);
 }
+
+.bgMove{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.4s linear;
+    transform: translate(80%, -50%);
+    background-color: rgb(27, 23, 23);
+}
+
+.fa-sun{
+    color:white;
+}
+
